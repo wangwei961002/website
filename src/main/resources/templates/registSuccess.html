@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>注册成功</h1><br/>
+  <!--thymeleaf 模板引擎中之前使用 ${} 获取 model 中的key,直接获取其中的内容-->
+  <div th:text="${user}"></div><br/>
+  <a th:href="@{/user/login}">点击跳转到登录页面</a><br/>
+</body>
+</html>

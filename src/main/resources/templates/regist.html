@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息注册</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<h2 th:align="center">用户注册页面</h2>
+<!--表单注册，注册完成后跳转到控制器方法 add 添加用户-->
+<form id="myform2" name="myform2" th:action="@{/user/add}"  method="post">
+        <table class="myform" align="center">
+            <tr>
+                <td>用户名:</td>
+                <td>
+                    <input name="username" th:type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td>
+                    <input name="password" th:type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    性别:
+                </td>
+                <td>
+                    male<input type="radio" name="sex">
+                    female<input type="radio" name="sex">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    年龄:
+                </td>
+                <td>
+                    <input name="age" th:type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    电话号码:
+                </td>
+                <td>
+                    <input th:type="text" name="phone">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" name="submit" value="提交">
+                </td>
+            </tr>
+        </table>
+</form>
+</body>
+</html>

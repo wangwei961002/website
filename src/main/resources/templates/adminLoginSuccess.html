@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录成功</title>
+</head>
+<body>
+  <h4 th:text="管理员恭喜您登录成功可以进行相应的操作" ></h4> <br/>
+    <!--显示所有的员工-->
+  <h4 th:text="以下是所有的员工信息"></h4>
+  <table>
+      <tr>
+          <td>id</td>
+          <td>用户名</td>
+          <td>性别</td>
+          <td>年龄</td>
+          <td>电话</td>
+          <td th:cols="2">操作</td>
+      </tr>
+      <tr th:each="user:${users}">
+          <td th:text="${user.id}"></td>
+          <td th:text="${user.username}"></td>
+          <td th:text="${user.sex}"></td>
+          <td th:text="${user.age}"></td>
+          <td th:text="${user.phone}"></td>
+          <td th:text="delete"></td>
+          <td th:text="update"></td>
+      </tr>
+
+  </table>
+</body>
+</html>

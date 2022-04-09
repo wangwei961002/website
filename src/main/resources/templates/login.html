@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<body>
+    <h2 align="center">用户登录页面</h2><br/>
+    <form id="userForm" name="userForm" th:action="@{/user/loginSuccess}"  method="post">
+        <table class="table1" align="center">
+            <tr>
+                <td>用户名:</td>
+                <td>
+                    <input th:type="text" name="username" placeholder="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    密码:
+                </td>
+                <td>
+                    <input th:type="text" th:name="password" placeholder="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a th:href="@{/user/regist}">注册</a>
+                </td>
+                <td>
+                    <input th:type="submit" name="submit" value="用户登录">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a th:href="@{/admin/login}">管理员登录</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
